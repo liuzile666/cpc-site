@@ -571,6 +571,93 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ================== ON-CHAIN ================== */
+/* Connect Phantom button in nav */
+.nav-cta-btn {
+  border: none; cursor: pointer;
+  font-family: inherit;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.nav-cta-btn .phantom-icon { font-size: 14px; }
+.nav-cta-btn.connected { background: #1a8a5c; }
+.nav-cta-btn.connected:hover { background: #157a4f; }
+
+/* Live metrics strip */
+.live-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+  padding: 28px;
+  background: rgba(224, 178, 80, 0.04);
+  border: 1px solid rgba(224, 178, 80, 0.18);
+  border-radius: 24px;
+}
+.live-metric {
+  display: flex; flex-direction: column;
+  gap: 6px;
+  padding: 4px 12px;
+  border-left: 1px solid rgba(255,255,255,0.06);
+}
+.live-metric:first-child { border-left: none; }
+.lm-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.3em;
+  color: var(--gold);
+}
+.lm-value {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  min-height: 1.1em;
+}
+.lm-value .lm-num.pulse {
+  animation: pulseGold 0.8s ease-out;
+}
+@keyframes pulseGold {
+  0%   { color: var(--gold); transform: scale(1); }
+  50%  { color: #fff; transform: scale(1.04); }
+  100% { color: #fff; transform: scale(1); }
+}
+.lm-net {
+  font-size: 0.7em;
+  background: rgba(224,178,80,0.12);
+  border: 1px solid rgba(224,178,80,0.4);
+  color: var(--gold);
+  padding: 4px 14px; border-radius: 999px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  display: inline-block;
+}
+.lm-sub {
+  font-size: 12px; color: var(--muted-d);
+  letter-spacing: 0.02em;
+}
+.live-metric-cta {
+  justify-content: center;
+  align-items: flex-start;
+}
+.btn-connect {
+  border: none; cursor: pointer;
+  font-family: inherit;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px;
+  font-size: 14px;
+}
+.btn-connect.connected {
+  background: #1a8a5c; color: #fff;
+}
+.btn-connect:disabled {
+  opacity: 0.7; cursor: default; transform: none;
+}
+@media (max-width: 900px) {
+  .live-metrics { grid-template-columns: repeat(2, 1fr); }
+  .live-metric { border-left: none; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 16px; }
+  .live-metric:nth-child(-n+2) { border-top: none; padding-top: 4px; }
+}
+
 .onchain-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

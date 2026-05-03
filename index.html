@@ -28,9 +28,10 @@
       <li><a href="#onchain">On-chain</a></li>
       <li><a href="#roadmap">Roadmap</a></li>
     </ul>
-    <a class="nav-cta" href="https://solscan.io/token/8W9pbRE8aPQZo89Fei36UcK7p8e9w8iTtjNc6QcBGGeJ?cluster=devnet" target="_blank" rel="noopener">
-      View on Solscan →
-    </a>
+    <button id="nav-connect" class="nav-cta nav-cta-btn" type="button">
+      <span class="phantom-icon" aria-hidden="true">👻</span>
+      <span class="connect-label">Connect Phantom</span>
+    </button>
   </div>
 </nav>
 
@@ -274,6 +275,34 @@
     <p class="section-lede reveal">
       This isn't a slide. The CPC token is deployed on Solana Devnet. Every field on this page maps to a line on the blockchain.
     </p>
+
+    <!-- Live metrics -->
+    <div class="live-metrics reveal">
+      <div class="live-metric">
+        <div class="lm-label">HOLDERS</div>
+        <div class="lm-value" id="metric-holders">
+          <span class="lm-num">—</span>
+        </div>
+        <div class="lm-sub" id="metric-holders-sub">syncing from Solscan…</div>
+      </div>
+      <div class="live-metric">
+        <div class="lm-label">SUPPLY</div>
+        <div class="lm-value"><span class="lm-num">200,000,000</span></div>
+        <div class="lm-sub">fixed · minted in one tx</div>
+      </div>
+      <div class="live-metric">
+        <div class="lm-label">NETWORK</div>
+        <div class="lm-value"><span class="lm-num lm-net">Devnet</span></div>
+        <div class="lm-sub">mainnet after audit</div>
+      </div>
+      <div class="live-metric live-metric-cta">
+        <button id="inline-connect" class="btn btn-primary btn-connect" type="button">
+          <span class="phantom-icon" aria-hidden="true">👻</span>
+          <span>Connect Phantom</span>
+        </button>
+        <div class="lm-sub" id="connect-status">Add CPC to your wallet in one click.</div>
+      </div>
+    </div>
 
     <div class="onchain-grid">
       <a class="onchain-card reveal" href="https://solscan.io/token/8W9pbRE8aPQZo89Fei36UcK7p8e9w8iTtjNc6QcBGGeJ?cluster=devnet" target="_blank" rel="noopener">
